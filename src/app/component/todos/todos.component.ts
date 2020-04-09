@@ -9,6 +9,7 @@ export class TodosComponent implements OnInit {
 
   constructor() { }
 
+  // Lifecycle method similar to created in Vue
   ngOnInit(): void {
   }
 
