@@ -8,12 +8,24 @@ import { Todo } from 'src/app/models/Todo';
 })
 export class TodoItemComponent implements OnInit {
 
-  // 
+  // Prop being passed in
   @Input() todo: Todo;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // Set Dynamic Classes
+  setClasses() {
+
+    let classes = {
+      todo: true,
+      'is-completed': this.todo.completed
+    }
+
+    return classes;
+
   }
 
 }
