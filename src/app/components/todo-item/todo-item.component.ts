@@ -31,7 +31,7 @@ export class TodoItemComponent implements OnInit {
   // Toggle event for marking off todos
   onToggle(todo) {
 
-    console.log('toggle');
+    todo.completed = !todo.completed;
 
   }
 
