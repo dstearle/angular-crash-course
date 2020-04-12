@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../../services//todo.service';
 import { Todo } from '../../models/Todo';
 
 @Component({
@@ -10,7 +11,7 @@ export class TodosComponent implements OnInit {
 
   todos:Todo[];
 
-  constructor() { }
+  constructor(private todoService:TodoService) { }
 
   // Lifecycle method similar to created in Vue
   ngOnInit(): void {
@@ -36,6 +37,9 @@ export class TodosComponent implements OnInit {
     //   },
 
     // ]
+
+    // Imported from services
+    this.todos = this.todoService.getTodos();
 
   }
 
