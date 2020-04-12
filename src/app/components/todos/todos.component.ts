@@ -15,26 +15,27 @@ export class TodosComponent implements OnInit {
   // Lifecycle method similar to created in Vue
   ngOnInit(): void {
 
+    // Moved to todo.service.ts
     // Array of todos to be listed
-    this.todos = [
+    // this.todos = [
 
-      {
-        id: 1,
-        title: 'Todo One',
-        completed: false
-      },
-      {
-        id: 2,
-        title: 'Todo Two',
-        completed: true
-      },
-      {
-        id: 3,
-        title: 'Todo Three',
-        completed: false
-      },
+    //   {
+    //     id: 1,
+    //     title: 'Todo One',
+    //     completed: false
+    //   },
+    //   {
+    //     id: 2,
+    //     title: 'Todo Two',
+    //     completed: true
+    //   },
+    //   {
+    //     id: 3,
+    //     title: 'Todo Three',
+    //     completed: false
+    //   },
 
-    ]
+    // ]
 
   }
 
