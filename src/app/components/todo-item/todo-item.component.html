@@ -3,13 +3,13 @@
     <p>
 
         <!-- Checkbox -->
-        <input type="checkbox"/>
+        <input (change)="onToggle(todo)" type="checkbox"/>
 
         <!-- Todo Title -->
         {{ todo.title }}
 
         <!-- Delete Button -->
-        <button class="del">X</button>
+        <button (click)="onDelete(todo)" class="del">X</button>
 
     </p>
     
