@@ -9,7 +9,11 @@ import { Todo } from '../models/Todo';
 })
 export class TodoService {
 
+  // The imported list of todos
   todosUrl:string = 'https://jsonplaceholder.typicode.com/todos';
+
+  // The amount of todo items we want to return
+  todosLimit = '?_limit=5';
 
   constructor(private http:HttpClient) { }
 
@@ -38,7 +42,7 @@ export class TodoService {
 
     // ]
 
-    return this.http.get<Todo[]>(this.todosUrl);
+    return this.http.get<Todo[]>(`${this.todosUrl}${this.todosLimit}`);
 
   }
 
