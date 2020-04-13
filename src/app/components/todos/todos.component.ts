@@ -14,7 +14,7 @@ export class TodosComponent implements OnInit {
   constructor(private todoService:TodoService) { }
 
   // Lifecycle method similar to created in Vue
-  ngOnInit(): void {
+  ngOnInit() {
 
     // Moved to todo.service.ts
     // Array of todos to be listed
@@ -39,7 +39,11 @@ export class TodosComponent implements OnInit {
     // ]
 
     // Imported from services
-    this.todos = this.todoService.getTodos();
+    this.todoService.getTodos().subscribe(todos => {
+
+      this.todos = todos;
+
+    });
 
   }
 
