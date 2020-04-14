@@ -50,8 +50,11 @@ export class TodosComponent implements OnInit {
   // To delete todo items
   deleteTodo(todo:Todo) {
 
-    // Filters out the item that has a matching id
+    // Filters out the item that has a matching id in the UI
     this.todos = this.todos.filter(t => t.id !== todo.id);
+
+    // Updates the back-end
+    this.todoService.deleteTodo(todo).subscribe();
 
   }
 
