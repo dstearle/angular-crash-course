@@ -47,6 +47,19 @@ export class TodosComponent implements OnInit {
 
   }
 
+  // To add todo items
+  addTodo(todo:Todo) {
+
+    // Accesses the back-end
+    this.todoService.addTodo(todo).subscribe(todo => {
+
+      // Pushes the new todo onto the array
+      this.todos.push(todo);
+
+    });
+
+  }
+
   // To delete todo items
   deleteTodo(todo:Todo) {
 
